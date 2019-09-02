@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
 import PersonCard from "./components/PersonCard";
-
+import "./App.css"; 
 
 
 
