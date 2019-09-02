@@ -30,7 +30,15 @@ const [people, setPeople] = useState([]);
       <h1 className="Header">React Wars</h1>
     {people.map((item, index) => {
        console.log(item)
-      return <PersonCard key={index} name={item.name} />
+      return <PersonCard key={index} name={item.name} 
+      gender={item.gender}
+      birthYear={item.birth_year}
+      hairColor={item.hair_color}
+      eyeColor={item.eye_color}
+     
+
+      
+      />
     
     })}
     </div>
