@@ -11,14 +11,11 @@ const [people, setPeople] = useState([]);
   useEffect(() => {
     axios.get('https://swapi.co/api/people/')
     .then(res => {
-      console.log(res.data.results)
       setPeople(res.data.results);
     })
     .catch(err => console.log(err));
   }, []);
   
-
-
   // Try to think through what state you'll need for this app before starting. Then build out
   // the state properties here.
 
@@ -30,20 +27,14 @@ const [people, setPeople] = useState([]);
     <div className="App">
       <h1 className="Header">React Wars</h1>
     {people.map((item, index) => {
-       console.log(item)
       return <PersonCard key={index} name={item.name} 
       gender={item.gender}
       birthYear={item.birth_year}
       hairColor={item.hair_color}
-      eyeColor={item.eye_color}
-     
-
-      
-      />
-    
+      eyeColor={item.eye_color}/>
     })}
     </div>
   );
-}
+};
 
 export default App;
